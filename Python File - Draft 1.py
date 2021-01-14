@@ -13,86 +13,166 @@ def CondimentMenu():
     return condiment
     
 def Dispense():
-    #Insert Dispensation Code Here
-    print "Condiment Dispensed. Enjoy!\n\n\n\n
+    #Claw Servo
+    cmd = "3" + "," + "100" + "\n"
+
+    time.sleep(1)
+    print "\n\nCondiment Dispensed. Enjoy!\n\n\n"
 
 def GraspAndLift():
-    #Insert...
+    #Claw Servo
+    cmd = "3" + "," + "84" + "\n"
+
+    time.sleep(1)
+
+    #Left Servo
+    cmd = "1" + "," + "170" + "\n"
+
+    time.sleep(1)
+
+    #Right Servo
+    cmd = "2" + "," + "90" + "\n"
+
+    time.sleep(1)
+    
 
 def MoveToCentre():
-    #Middle Servo
-    cmd = 0 + "," + 90 + "\n"
-    ser.write(cmd)
-    #Left Servo
-    cmd = 1 + "," + 180 + "\n"
-    ser.write(cmd)
     #Right Servo
-    cmd = 2 + "," + 90 + "\n"
-    ser.write(cmd)
-    #Claw Servo
-    cmd = 3 + "," + 82 + "\n"
-    ser.write(cmd)
+    cmd = "2" + "," + "90" + "\n"
+
+    time.sleep(1)
+    #Left Servo
+    cmd = "1" + "," + "180" + "\n"
+
+    time.sleep(1)
+    #Middle Servo
+    cmd = "0" + "," + "90" + "\n"
+
+    time.sleep(1)
     
 def Ketchup():
-    print "Now dispensing your ketchup...\n\n"
+    print "\n\nNow dispensing your ketchup...\n\n\n"
     #Claw Servo
-    cmd = 3 + "," + 45 + "\n"
-    ser.write(cmd)
+    cmd = "3" + "," + "10" + "\n"
+
+    time.sleep(1)
     #Middle Servo
-    cmd = 0 + "," + 55 + "\n"
-    ser.write(cmd)
+    cmd = "0" + "," + "51" + "\n"
+ 
+    time.sleep(1)
     #Left Servo
-    cmd = 1 + "," + 158 + "\n"
-    ser.write(cmd)
+    cmd = "1" + "," + "140" + "\n"
+
+    time.sleep(1)
     #Right Servo
-    cmd = 2 + "," + 128 + "\n"
-    ser.write(cmd)
+    cmd = "2" + "," + "123" + "\n"
+
+    time.sleep(1)
     GraspAndLift()
     MoveToCentre()
     Dispense()
     #Middle Servo
-    cmd = 0 + "," + 55 + "\n"
-    ser.write(cmd)
-    #Left Servo
-    cmd = 1 + "," + 158 + "\n"
-    ser.write(cmd)
+    cmd = "0" + "," + "51" + "\n"
+
+    time.sleep(1)
     #Right Servo
-    cmd = 2 + "," + 128 + "\n"
+    cmd = "2" + "," + "121" + "\n"
+
+    time.sleep(1)
+    #Left Servo
+    cmd = "1" + "," + "140" + "\n"
+
+    time.sleep(1)
     #Claw Servo
-    cmd = 3 + "," + 0 + "\n"
-    ser.write(cmd)
+    cmd = "3" + "," + "10" + "\n"
+
+    time.sleep(1)
     MoveToCentre()
 
 def SweetChilli():
-    print "Now dispensing your sweet chilli...\n\n"
+    print "\n\nNow dispensing your sweet chilli...\n\n\n"
     #Insert SweetChilli Fetch code here
-
-def BBQ():
-    print "Now dispensing your BBQ...\n\n"
-    #Insert BBQ Fetch code here
-
-
-try:
-    try:
-        usbport = COM3
-        ser = serial.Serial(usbport, 9600, timeout=1)
-    except:
-        print "Connection Error. Please Restart The Program."            
-    #Middle Servo
-    cmd = 0 + "," + 90 + "\n"
-    ser.write(cmd)
-    #Left Servo
-    cmd = 1 + "," + 180 + "\n"
-    ser.write(cmd)
-    #Right Servo
-    cmd = 2 + "," + 90 + "\n"
-    ser.write(cmd)
     #Claw Servo
-    cmd = 3 + "," + 82 + "\n"
-    ser.write(cmd)
-except:
-    print "Callibration Error"
-    
+    cmd = "3" + "," + "10" + "\n"
+
+    time.sleep(1)
+    #Middle Servo
+    cmd = "0" + "," + "70" + "\n"
+
+    time.sleep(1)
+    #Left Servo
+    cmd = "1" + "," + "140" + "\n"
+
+    time.sleep(1)
+    #Right Servo
+    cmd = "2" + "," + "137" + "\n"
+
+    time.sleep(1)
+    GraspAndLift()
+    MoveToCentre()
+    Dispense()
+    #Middle Servo
+    cmd = "0" + "," + "70" + "\n"
+
+    time.sleep(1)
+    #Right Servo
+    cmd = "2" + "," + "136" + "\n"
+
+    time.sleep(1)
+    #Left Servo
+    cmd = "1" + "," + "140" + "\n"
+
+    time.sleep(1)
+    #Claw Servo
+    cmd = "3" + "," + "10" + "\n"
+
+    time.sleep(1)
+    MoveToCentre()
+def BBQ():
+    print "\n\nNow dispensing your BBQ...\n\n\n"
+    #Claw Servo
+    cmd = "3" + "," + "10" + "\n"
+
+    time.sleep(1)
+    #Middle Servo
+    cmd = "0" + "," + "32" + "\n"
+
+    time.sleep(1)
+    #Left Servo
+    cmd = "1" + "," + "139" + "\n"
+
+    time.sleep(1)
+    #Right Servo
+    cmd = "2" + "," + "121" + "\n"
+
+    time.sleep(1)
+    GraspAndLift()
+    MoveToCentre()
+    Dispense()
+    #Middle Servo
+    cmd = "0" + "," + "32" + "\n"
+
+    time.sleep(1)
+    #Right Servo
+    cmd = "2" + "," + "121" + "\n"
+
+    time.sleep(1)
+    #Left Servo
+    cmd = "1" + "," + "139" + "\n"
+
+    time.sleep(1)
+    #Claw Servo
+    cmd = "3" + "," + "10" + "\n"
+
+    time.sleep(1)
+    MoveToCentre()
+
+
+MoveToCentre()
+#Claw Servo
+cmd = "3" + "," + "10" + "\n"
+
+time.sleep(1)
 while True:
     condimentSelection = CondimentMenu()
 
